@@ -114,7 +114,16 @@ public class Armour extends Equippable implements Item
     @Override
     public String toString()
     {
-        return "  Refer to the previous assignment...";
+        return String.format(
+            FMT_STR,
+            this.getName(),
+            this.getDurability(),   // goes into the "Dur: %s" slot
+            this.getDefense(),
+            this.getMaterial(),
+            this.getModifier(),
+            this.getModifierLevel(),
+            this.getElement()
+        );
     }
 }
 
